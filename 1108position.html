@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>java1108-position</title>
+</head>
+
+<style>
+    img{
+        position: absolute;
+    }
+    
+</style>
+
+<script>
+    let name=new Array(6);
+    name[0]="木守宮";
+    name[1]="皮卡丘";
+    name[2]="妙蛙種子";
+    name[3]="可達鴨";
+    name[4]="波克比";
+    name[5]="小火龍";
+    
+    let pos=new Array(6);
+    pos[0]="n0";
+    pos[1]="n1";
+    pos[2]="n2";
+    pos[3]="n3";
+    pos[4]="n4";
+    pos[5]="n5";
+    
+    let color=new Array(6);
+    color[0]="#006030";
+    color[1]="#AE8F00";
+    color[2]="#548C00";
+    color[3]="#9F5000";
+    color[4]="#FF7575";
+    color[5]="#930000";
+    
+    function run(){
+        document.getElementById("n0").style.left="370px";
+        document.getElementById("n0").style.top="290px";
+        
+        document.getElementById("n1").style.left="350px";
+        document.getElementById("n1").style.top="470px";
+        
+        document.getElementById("n2").style.left="580px";
+        document.getElementById("n2").style.top="310px";
+        
+        document.getElementById("n3").style.left="580px";
+        document.getElementById("n3").style.top="470px";
+
+        document.getElementById("n4").style.left="800px";
+        document.getElementById("n4").style.top="300px";
+
+        document.getElementById("n5").style.left="800px";
+        document.getElementById("n5").style.top="490px";
+  
+        
+        let idx=Math.floor(Math.random()*6);
+        document.getElementById(pos[idx]).style.left="800px";
+        document.getElementById(pos[idx]).style.top="30px";
+        document.getElementById("name").innerHTML=name[idx]+"!";
+        document.body.style.backgroundColor=color[idx];
+    }
+    
+</script>
+
+<body>
+   <p>
+    <img id="n0" src="images/pokemon0.png" width="150px" style="left: 370px;top: 290px">
+    <img id="n1" src="images/pokemon1.png" width="200px" style="left: 350px;top: 470px">
+    <img id="n2" src="images/pokemon2.png" width="150px" style="left: 580px;px;top: 310px">
+    <img id="n3" src="images/pokemon3.png" width="150px" style="left: 580px;top: 470px">
+    <img id="n4" src="images/pokemon4.png" width="150px" style="left: 800px;top: 300px">
+    <img id="n5" src="images/pokemon5.png" width="150px" style="left: 800px;top: 490px">
+
+    <img src="images/ball.png" width="130px" style="left: 600px;top: 130px" onclick="run()"> 
+   </p>
+    <h2 align="center">你所召喚出來的神奇寶貝是<span id="name"> </span></h2>
+    <h3 align="center">請按下你的神奇寶貝球吧！</h3>
+</body>
+</html>
